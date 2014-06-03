@@ -20,7 +20,6 @@ public class KafkaConfiguration extends Configuration {
             p.put("metadata.broker.list", metadataBrokerList);
             p.put("serializer.class", serializerClass);
             p.put("producer.type", producerType);
-            p.put("producer.type", "async");
 
             return p;
         }
