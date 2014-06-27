@@ -4,13 +4,13 @@
 
     <groupId>ly.stealth</groupId>
     <artifactId>dropwizard-kafka-http</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
-            <groupId>com.yammer.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
-            <version>0.6.2</version>
+            <version>0.7.1</version>
         </dependency>
 
         <dependency>
@@ -86,7 +86,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>ly.stealth.kafkahttp.KafkaService</mainClass>
+                                    <mainClass>net.ilius.kafkahttp.KafkaHttp</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>

@@ -1,11 +1,11 @@
-package ly.stealth.kafkahttp;
+package net.ilius.kafkahttp;
 
-import com.yammer.dropwizard.config.Configuration;
+import io.dropwizard.Configuration;
 import kafka.api.OffsetRequest;
 
 import java.util.Properties;
 
-public class KafkaConfiguration extends Configuration {
+public class KafkaHttpConfiguration extends Configuration {
     public Consumer consumer;
     public Producer producer;
 

@@ -1,7 +1,7 @@
-package ly.stealth.kafkahttp;
+package net.ilius.kafkahttp.resources;
 
 import com.google.common.base.Strings;
-import com.yammer.metrics.annotation.Timed;
+import com.codahale.metrics.annotation.Timed;
 import kafka.consumer.Consumer;
 import kafka.consumer.ConsumerConfig;
 import kafka.consumer.ConsumerTimeoutException;
@@ -10,6 +10,7 @@ import kafka.javaapi.consumer.ConsumerConnector;
 import kafka.javaapi.producer.Producer;
 import kafka.message.MessageAndMetadata;
 import kafka.producer.KeyedMessage;
+import net.ilius.kafkahttp.KafkaHttpConfiguration;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -21,9 +22,9 @@ import java.util.*;
 @Produces(MediaType.APPLICATION_JSON)
 public class MessageResource {
     private Producer<String, String> producer;
-    private KafkaConfiguration.Consumer consumerCfg;
+    private KafkaHttpConfiguration.Consumer consumerCfg;
 
-    public MessageResource(Producer<String, String> producer, KafkaConfiguration.Consumer consumerCfg) {
+    public MessageResource(Producer<String, String> producer, KafkaHttpConfiguration.Consumer consumerCfg) {
         this.producer = producer;
         this.consumerCfg = consumerCfg;
     }
